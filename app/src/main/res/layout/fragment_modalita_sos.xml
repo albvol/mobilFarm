@@ -1,0 +1,41 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.albertovolpe.mobilfarm.GestoreAccountClient.ModalitaSOS">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="4"
+        android:textSize="300dp"
+        android:id="@+id/time"
+        android:textColor="@color/red"/>
+
+    <TextView
+        android:layout_marginTop="-30dp"
+        android:layout_width="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="S.O.S."
+        android:textSize="@dimen/font_big"
+        android:id="@+id/text"
+        android:visibility="gone"
+        android:textColor="@color/red"/>
+
+    <TextView
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text=""
+        android:textSize="@dimen/font_medium"
+        android:id="@+id/editLocation"
+        android:visibility="gone"
+        android:textColor="@color/red"/>
+
+</FrameLayout>
