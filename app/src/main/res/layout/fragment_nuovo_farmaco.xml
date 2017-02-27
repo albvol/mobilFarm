@@ -1,0 +1,119 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.example.albertovolpe.mobilfarm.GestoreFarmacoClient.NuovoFarmaco">
+
+    <ScrollView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/content_padding_bottom">
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:id="@+id/anagrafica"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingLeft="@dimen/editText_padding_left"
+            android:paddingRight="@dimen/editText_padding_left">
+
+            <TextView
+                android:paddingLeft="@dimen/editText_padding_left"
+                android:paddingRight="@dimen/editText_padding_right"
+                android:layout_marginTop="@dimen/editText_margin_top"
+                android:layout_marginBottom="@dimen/editText_margin_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Informazioni generali:"
+                android:textSize="@dimen/font_small"
+                android:textColor="@color/green"
+                android:textAlignment="center"/>
+
+            <EditText
+                android:layout_marginTop="@dimen/editText_margin_top"
+                android:layout_marginBottom="@dimen/editText_margin_bottom"
+                android:layout_width="@dimen/editText_width"
+                android:layout_height="@dimen/editText_height"
+                android:paddingLeft="@dimen/editText_padding_left"
+                android:maxLength="11"
+                android:paddingRight="@dimen/editText_padding_right"
+                android:background="@drawable/field_editable"
+                android:textColor="@color/green"
+                android:textColorHint="@color/green"
+                android:ems="10"
+                android:id="@+id/nome_farmaco"
+                android:hint="Nome Farmaco"
+                android:inputType="textCapWords" />
+
+            <Spinner
+                android:layout_marginTop="@dimen/editText_margin_top"
+                android:layout_marginBottom="@dimen/editText_margin_bottom"
+                android:layout_width="@dimen/editText_width"
+                android:layout_height="@dimen/editText_height"
+                android:paddingLeft="@dimen/editText_padding_left"
+                android:paddingRight="@dimen/editText_padding_right"
+                android:background="@drawable/field_editable"
+                android:textColor="@color/green"
+                android:textColorHint="@color/green"
+                android:inputType="number"
+                android:ems="10"
+                android:entries="@array/composizione"
+                android:id="@+id/composizione_value"/>
+
+            <TextView
+                android:paddingLeft="@dimen/editText_padding_left"
+                android:paddingRight="@dimen/editText_padding_right"
+                android:layout_marginTop="@dimen/editText_margin_top"
+                android:layout_marginBottom="@dimen/editText_margin_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_small"
+                android:text="Se vuoi salvarlo nel tuo VMF\nindica la scadenza:"
+                android:textColor="@color/green"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:layout_marginTop="@dimen/editText_margin_top"
+                android:layout_marginBottom="@dimen/editText_margin_bottom"
+                android:layout_width="@dimen/editText_width"
+                android:layout_height="@dimen/editText_height"
+                android:paddingLeft="@dimen/editText_padding_left"
+                android:paddingRight="@dimen/editText_padding_right"
+                android:background="@drawable/field_editable"
+                android:textColor="@color/green"
+                android:textColorHint="@color/green"
+                android:paddingTop="15dp"
+                android:textSize="@dimen/font_medium"
+                android:ems="10"
+                android:id="@+id/text_scadenza_farmaco"
+                android:hint="Data di scadenza"/>
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/feedback_message"
+                android:textColor="@color/green"
+                android:textAlignment="center"/>
+
+            <Button
+                android:layout_marginTop="@dimen/button_margin_top"
+                android:layout_marginBottom="@dimen/button_margin_bottom"
+                android:paddingLeft="@dimen/button_padding_left"
+                android:paddingRight="@dimen/button_padding_right"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_height"
+                android:layout_gravity="center"
+                android:background="@drawable/button_green"
+                android:textColor="@color/white"
+                android:text="AGGIUNGI"
+                android:textStyle="normal"
+                android:id="@+id/button_create"/>
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

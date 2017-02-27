@@ -1,0 +1,74 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.example.albertovolpe.mobilfarm.GestoreFarmacoClient.FarmacoInScadenza">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ciao NomeDottore"
+            android:textAlignment="center"
+            android:id="@+id/text_hello"
+            android:textColor="@color/green"
+            android:textSize="@dimen/font_medium"/>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/button_padding_left"
+            android:layout_marginRight="@dimen/button_padding_right"
+            android:layout_height="wrap_content"
+            android:background="@drawable/home_square">
+
+            <TextView
+                android:layout_marginTop="130dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nessuna farmaco \nè scaduto…..."
+                android:textAlignment="center"
+                android:id="@+id/text_nessuna_scadenza"
+                android:textColor="@color/green"
+                android:textSize="@dimen/font_medium"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/layout_scadenza_presente">
+
+
+                <TextView
+                    android:layout_marginTop="30dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Farmaci Scaduti"
+                    android:textAlignment="center"
+                    android:id="@+id/text_scadenza"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/font_big"/>
+
+                <ListView
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lista_farmaci"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

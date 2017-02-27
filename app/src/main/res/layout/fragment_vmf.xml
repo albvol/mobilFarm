@@ -1,0 +1,55 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.example.albertovolpe.mobilfarm.GestoreFarmacoClient.VMF">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_marginBottom="@dimen/editText_margin_bottom"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/editText_padding_left"
+            android:paddingRight="@dimen/editText_padding_right"
+            android:background="@drawable/filter"
+            android:textColor="@color/green"
+            android:textColorHint="@color/green"
+            android:ems="5"
+            android:maxLength="20"
+            android:id="@+id/text_filter"
+            android:hint="Filtra..." />
+
+        <ImageView
+            android:onClick="apriCercaFarmaco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/plus_button"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/feedback_message"
+        android:textColor="@color/green"
+        android:textAlignment="center"
+        android:textSize="@dimen/font_small"
+        android:text="Caricamento..."
+        android:layout_marginBottom="20dp"/>
+
+    <ListView
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:visibility="gone"
+        android:layout_marginTop="50dp"
+        android:id="@+id/lista_farmaci"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</FrameLayout>
+

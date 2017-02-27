@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_dottore_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.example.albertovolpe.mobilfarm.GestoreAccountClient.DottoreHome">
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/navigation_bar_height"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/section_opened"
+        />
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/navigation_bar_height"
+        android:background="@drawable/navigation_bar">
+
+        <TextView
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="mobilFarm"
+            android:id="@+id/title_bar"
+            android:paddingTop="17dp"
+            android:textSize="@dimen/font_big"
+            android:onClick="logout"
+            android:textColor="@color/white"
+            android:textAlignment="center"/>
+
+        <ImageView
+            android:layout_marginTop="4dp"
+            android:layout_alignParentLeft="true"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:id="@+id/button_logout"
+            android:onClick="logout"
+            android:clickable="true"
+            android:src="@drawable/logout"/>
+
+        <ImageView
+            android:layout_marginTop="4dp"
+            android:layout_alignParentLeft="true"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:id="@+id/button_back"
+            android:onClick="back"
+            android:clickable="true"
+            android:visibility="gone"
+            android:src="@drawable/back"/>
+
+        <ImageView
+            android:layout_marginTop="4dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:onClick="apriProfiloDottore"
+            android:id="@+id/button_profile"
+            android:clickable="true"
+            android:src="@drawable/doctor_icon"/>
+
+        <ImageView
+            android:layout_marginTop="4dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:onClick="home"
+            android:id="@+id/button_home"
+            android:clickable="true"
+            android:visibility="gone"
+            android:src="@drawable/home"/>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:background="@drawable/green_button"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:onClick="apriVMF">
+
+            <ImageView
+                android:layout_marginTop="-3dp"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:src="@drawable/vmf"
+                android:layout_marginLeft="15dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:background="@drawable/green_button"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:onClick="apriRubrica"
+            >
+            <ImageView
+                android:layout_marginTop="-3dp"
+                android:layout_width="38dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:src="@drawable/rubrica_pazienti"
+                android:layout_marginLeft="15dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:background="@drawable/green_button"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:onClick="apriNuovoPianoTerapeutico"
+            >
+            <ImageView
+                android:layout_marginTop="-2dp"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:src="@drawable/piani"
+                android:layout_marginLeft="15dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

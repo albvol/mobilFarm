@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="specializzazione">
+        <item>Chirurgo/a</item>
+        <item>Base/a</item>
+        <item>Dermatologo/a</item>
+        <item>Oculista</item>
+    </string-array>
+
+
+</resources>

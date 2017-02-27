@@ -1,0 +1,234 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.example.albertovolpe.mobilfarm.GestoreAccountClient.SchedaDottore">
+
+    <TextView
+        android:layout_gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/feedback_message"
+        android:textColor="@color/green"
+        android:textAlignment="center"
+        android:layout_marginBottom="20dp"
+        android:text="Caricamento..."/>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/content">
+
+        <ScrollView
+            android:paddingTop="150dp"
+            android:paddingBottom="@dimen/content_padding_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/personalized_content_margin_right"
+                android:layout_marginLeft="@dimen/personalized_content_margin_left"
+                android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Indirizzo Studio"
+                    android:id="@+id/indirizzo_studio"
+                    android:gravity="left"
+                    android:textColor="@color/grey"
+                    android:inputType="textCapWords"
+                    android:textSize="@dimen/font_small"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/indirizzo_studio_value"
+                    android:gravity="right"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/font_small"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/linea_margin"
+                android:layout_marginBottom="@dimen/linea_margin"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/green"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Città Studio"
+                    android:id="@+id/città_studio"
+                    android:gravity="left"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/font_small"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/città_studio_value"
+                    android:gravity="right"
+                    android:textColor="@color/green"
+                    android:inputType="textCapWords"
+                    android:textSize="@dimen/font_small"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/linea_margin"
+                android:layout_marginBottom="@dimen/linea_margin"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/green"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Telefono"
+                    android:id="@+id/telefono"
+                    android:gravity="left"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/font_small"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/telefono_value"
+                    android:gravity="right"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/font_small"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/linea_margin"
+                android:layout_marginBottom="@dimen/linea_margin"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/green"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="E-mail"
+                    android:id="@+id/email"
+                    android:gravity="left"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/font_small"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/email_value"
+                    android:gravity="right"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/font_small"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/linea_margin"
+                android:layout_marginBottom="@dimen/linea_margin"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/green"/>
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/feedback_message_2"
+                android:textColor="@color/green"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"/>
+
+                <Button
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="@dimen/button_margin_bottom"
+                android:paddingLeft="@dimen/button_padding_left"
+                android:paddingRight="@dimen/button_padding_right"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_height"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:background="@drawable/button_red"
+                android:textColor="@color/white"
+                android:text="Rimuovi"
+                android:id="@+id/rimuovi_button"/>
+
+            <Button
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="@dimen/button_margin_bottom"
+                android:paddingLeft="@dimen/button_padding_left"
+                android:paddingRight="@dimen/button_padding_right"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_height"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:background="@drawable/button_green"
+                android:textColor="@color/white"
+                android:text="Aggiungi"
+                android:id="@+id/aggiungi_button"/>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/top_bar"
+            android:orientation="vertical"
+            android:background="@drawable/rounded_bar">
+
+            <TextView
+                android:layout_marginTop="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nome Cognome Dottore"
+                android:id="@+id/text_nome_cognome"
+                android:textColor="@color/green"
+                android:gravity="center"
+                android:textSize="@dimen/font_big"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Specializzazione"
+                android:id="@+id/specializzazione"
+                android:gravity="center"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/font_medium"/>
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

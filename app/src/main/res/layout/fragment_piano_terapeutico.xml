@@ -1,0 +1,132 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.example.albertovolpe.mobilfarm.GestorePianoClient.PianoTerapeutico">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/editText_margin_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/first_section">
+            <TextView
+                android:paddingLeft="@dimen/editText_padding_left"
+                android:paddingRight="@dimen/editText_padding_right"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="@dimen/editText_margin_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Informazioni generali"
+                android:textSize="@dimen/font_small"
+                android:textColor="@color/green"
+                android:textAlignment="center"/>
+
+
+            <EditText
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="@dimen/editText_margin_bottom"
+                android:layout_marginLeft="@dimen/editText_margin_left"
+                android:layout_marginRight="@dimen/editText_margin_right"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/editText_height"
+                android:paddingLeft="@dimen/editText_padding_left"
+                android:paddingRight="@dimen/editText_padding_right"
+                android:background="@drawable/field_editable"
+                android:textColor="@color/green"
+                android:textColorHint="@color/green"
+                android:ems="10"
+                android:maxLength="50"
+                android:id="@+id/text_nome_piano"
+                android:hint="Nome terapia"
+                android:inputType="textCapWords" />
+
+            <Spinner
+                android:layout_marginTop="@dimen/editText_margin_top"
+                android:layout_marginBottom="@dimen/editText_margin_bottom"
+                android:layout_marginLeft="@dimen/editText_margin_left"
+                android:layout_marginRight="@dimen/editText_margin_right"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/editText_height"
+                android:paddingLeft="@dimen/editText_padding_left"
+                android:paddingRight="@dimen/editText_padding_right"
+                android:background="@drawable/field_editable"
+                android:textColor="@color/green"
+                android:textColorHint="@color/green"
+                android:ems="10"
+                android:id="@+id/spinner_pazienti"/>
+
+            <Button
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:paddingLeft="@dimen/button_padding_left"
+                android:paddingRight="@dimen/button_padding_right"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_height"
+                android:layout_gravity="center"
+                android:background="@drawable/button_green"
+                android:textColor="@color/white"
+                android:text="Crea Piano"
+                android:textStyle="normal"
+                android:id="@+id/button_load_second_section"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:visibility="gone"
+            android:layout_below="@+id/first_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/second_section">
+            <TextView
+                android:paddingLeft="@dimen/editText_padding_left"
+                android:paddingRight="@dimen/editText_padding_right"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lista Farmaci"
+                android:textSize="@dimen/font_small"
+                android:textColor="@color/green"
+                android:textAlignment="center"/>
+
+            <ListView
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="@dimen/editText_margin_left"
+                android:layout_marginRight="@dimen/editText_margin_right"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:id="@+id/farmaci_piano"/>
+
+            <Button
+                android:layout_marginTop="@dimen/button_margin_top"
+                android:layout_marginBottom="20dp"
+                android:paddingLeft="@dimen/button_padding_left"
+                android:paddingRight="@dimen/button_padding_right"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_height"
+                android:layout_gravity="center"
+                android:background="@drawable/button_green"
+                android:textColor="@color/white"
+                android:text="AGGIUNGI UN FARMACO"
+                android:textStyle="normal"
+                android:id="@+id/button_add"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/feedback_message"
+            android:textColor="@color/green"
+            android:textAlignment="center"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="300dp"/>
+    </RelativeLayout>
+</FrameLayout>

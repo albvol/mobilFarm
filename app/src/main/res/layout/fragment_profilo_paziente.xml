@@ -1,0 +1,401 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.example.albertovolpe.mobilfarm.GestoreAccountClient.ProfiloPaziente">
+
+    <TextView
+        android:layout_gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/feedback_message"
+        android:textColor="@color/green"
+        android:textAlignment="center"
+        android:layout_marginBottom="20dp"
+        android:text="Caricamento..."/>
+
+
+    <ScrollView
+        android:id="@+id/content"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:paddingTop="@dimen/content_padding_top"
+            android:paddingBottom="@dimen/content_padding_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/riepilogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/editText_padding_left"
+                android:paddingRight="@dimen/editText_padding_left">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="@dimen/editText_padding_left"
+                    android:paddingRight="@dimen/editText_padding_left"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/paziente_icon"/>
+
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/view_nome"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/green"
+                            android:text="Nome"
+                            android:textSize="@dimen/font_medium"/>
+
+                        <TextView
+                            android:layout_marginLeft="5dp"
+                            android:id="@+id/view_cognome"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/green"
+                            android:text="Cognome"
+                            android:textSize="@dimen/font_medium"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/view_sesso"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/grey"
+                        android:text="Sesso"
+                        android:textSize="@dimen/font_small"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:id="@+id/anagrafica"
+                android:layout_below="@id/riepilogo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:paddingLeft="@dimen/editText_padding_left"
+                android:paddingRight="@dimen/editText_padding_left">
+
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Codice Fiscale:"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/font_small"/>
+
+
+                <EditText
+                    android:layout_marginTop="@dimen/editText_margin_top"
+                    android:layout_marginBottom="@dimen/editText_margin_bottom"
+                    android:layout_width="@dimen/editText_width"
+                    android:layout_height="@dimen/editText_height"
+                    android:paddingLeft="@dimen/editText_padding_left"
+                    android:paddingRight="@dimen/editText_padding_right"
+                    android:background="@drawable/field_blocked"
+                    android:textColor="@color/green"
+                    android:textColorHint="@color/green"
+                    android:ems="10"
+                    android:id="@+id/text_cf"
+                    android:inputType="textCapCharacters"
+                    android:hint="Codice Fiscale"/>
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Data Di Nascita:"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/font_small"/>
+
+                <EditText
+                    android:layout_marginTop="@dimen/editText_margin_top"
+                    android:layout_marginBottom="@dimen/editText_margin_bottom"
+                    android:layout_width="@dimen/editText_width"
+                    android:layout_height="@dimen/editText_height"
+                    android:paddingLeft="@dimen/editText_padding_left"
+                    android:paddingRight="@dimen/editText_padding_right"
+                    android:background="@drawable/field_blocked"
+                    android:textColor="@color/green"
+                    android:textColorHint="@color/green"
+                    android:ems="10"
+                    android:id="@+id/text_dataNascita"
+                    android:hint="Data di Nascita"/>
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Luogo Di Nascita:"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/font_small"/>
+
+                <EditText
+                    android:layout_marginTop="@dimen/editText_margin_top"
+                    android:layout_marginBottom="@dimen/editText_margin_bottom"
+                    android:layout_width="@dimen/editText_width"
+                    android:layout_height="@dimen/editText_height"
+                    android:paddingLeft="@dimen/editText_padding_left"
+                    android:paddingRight="@dimen/editText_padding_right"
+                    android:background="@drawable/field_blocked"
+                    android:textColor="@color/green"
+                    android:textColorHint="@color/green"
+                    android:ems="10"
+                    android:id="@+id/text_luogoNascita"
+                    android:inputType="textCapWords"
+                    android:hint="Luogo di Nascita"/>
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Città Di Residenza:"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/font_small"/>
+
+                <EditText
+                    android:layout_marginTop="@dimen/editText_margin_top"
+                    android:layout_marginBottom="@dimen/editText_margin_bottom"
+                    android:layout_width="@dimen/editText_width"
+                    android:layout_height="@dimen/editText_height"
+                    android:paddingLeft="@dimen/editText_padding_left"
+                    android:maxLength="50"
+                    android:paddingRight="@dimen/editText_padding_right"
+                    android:background="@drawable/field_editable"
+                    android:textColor="@color/green"
+                    android:textColorHint="@color/green"
+                    android:ems="10"
+                    android:id="@+id/text_citta_residenza"
+                    android:inputType="textCapWords"
+                    android:hint="CIttà di Residenza"/>
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Residenza:"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/font_small"/>
+
+                <EditText
+                    android:layout_marginTop="@dimen/editText_margin_top"
+                    android:layout_marginBottom="@dimen/editText_margin_bottom"
+                    android:layout_width="@dimen/editText_width"
+                    android:layout_height="@dimen/editText_height"
+                    android:paddingLeft="@dimen/editText_padding_left"
+                    android:paddingRight="@dimen/editText_padding_right"
+                    android:background="@drawable/field_editable"
+                    android:textColor="@color/green"
+                    android:textColorHint="@color/green"
+                    android:ems="10"
+                    android:maxLength="50"
+                    android:id="@+id/text_residenza"
+                    android:inputType="textCapWords"
+                    android:hint="Residenza (Via)"/>
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Numero Di Telefono:"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/font_small"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/editText_margin_top"
+                    android:layout_marginBottom="@dimen/editText_margin_bottom"
+                    >
+                    <EditText
+                        android:layout_width="50dp"
+                        android:textAlignment="center"
+                        android:layout_height="@dimen/editText_height"
+                        android:background="@drawable/field_blocked"
+                        android:textColor="@color/green"
+                        android:textColorHint="@color/green"
+                        android:ems="5"
+                        android:inputType="phone"
+                        android:id="@+id/prefix"
+                        android:hint="+39"
+                        android:enabled="false"/>
+
+                    <EditText
+                        android:layout_marginLeft="4dp"
+                        android:layout_width="190dp"
+                        android:layout_height="@dimen/editText_height"
+                        android:paddingLeft="@dimen/editText_padding_left"
+                        android:paddingRight="@dimen/editText_padding_right"
+                        android:background="@drawable/field_editable"
+                        android:textColor="@color/green"
+                        android:textColorHint="@color/green"
+                        android:ems="10"
+                        android:digits="0123456789"
+                        android:inputType="phone"
+                        android:id="@+id/text_cellulare"
+                        android:hint="Cellulare"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dettagli Clinici:"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/font_small"/>
+
+                <EditText
+                    android:layout_marginTop="@dimen/editText_margin_top"
+                    android:layout_marginBottom="@dimen/editText_margin_bottom"
+                    android:layout_width="@dimen/editText_width"
+                    android:layout_height="100dp"
+                    android:paddingLeft="@dimen/editText_padding_left"
+                    android:paddingRight="@dimen/editText_padding_right"
+                    android:background="@drawable/field_editable"
+                    android:textColor="@color/green"
+                    android:textColorHint="@color/green"
+                    android:ems="10"
+                    android:id="@+id/text_dettagliClinici"
+                    android:inputType="textCapSentences"
+                    android:hint="Dettagli Clinici"/>
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Numero Di Emergenza 1:"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/font_small"/>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/editText_margin_top"
+                    android:layout_marginBottom="@dimen/editText_margin_bottom"
+                    >
+
+
+                    <EditText
+                        android:layout_width="50dp"
+                        android:textAlignment="center"
+                        android:layout_height="@dimen/editText_height"
+                        android:background="@drawable/field_blocked"
+                        android:textColor="@color/green"
+                        android:textColorHint="@color/green"
+                        android:ems="5"
+                        android:inputType="phone"
+                        android:id="@+id/prefixSOS1"
+                        android:hint="+39"
+                        android:enabled="false"/>
+
+                    <EditText
+                        android:layout_width="190dp"
+                        android:layout_height="@dimen/editText_height"
+                        android:paddingLeft="@dimen/editText_padding_left"
+                        android:paddingRight="@dimen/editText_padding_right"
+                        android:background="@drawable/field_editable"
+                        android:textColor="@color/green"
+                        android:textColorHint="@color/green"
+                        android:ems="10"
+                        android:layout_marginLeft="5dp"
+                        android:id="@+id/text_SOS1"
+                        android:inputType="number"
+                        android:hint="Recapito SOS1"/>
+
+                 </LinearLayout>
+
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Numero Di Emergenza 2:"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/font_small"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/editText_margin_top"
+                    android:layout_marginBottom="@dimen/editText_margin_bottom">
+
+
+                    <EditText
+                        android:layout_width="50dp"
+                        android:textAlignment="center"
+                        android:layout_height="@dimen/editText_height"
+                        android:background="@drawable/field_blocked"
+                        android:textColor="@color/green"
+                        android:textColorHint="@color/green"
+                        android:ems="5"
+                        android:maxLength="10"
+                        android:inputType="phone"
+                        android:id="@+id/prefixSOS2"
+                        android:hint="+39"
+                        android:enabled="false"/>
+
+                    <EditText
+                        android:layout_width="190dp"
+                        android:layout_weight="1"
+                        android:layout_height="@dimen/editText_height"
+                        android:paddingLeft="@dimen/editText_padding_left"
+                        android:paddingRight="@dimen/editText_padding_right"
+                        android:maxLength="10"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/field_editable"
+                        android:textColor="@color/green"
+                        android:textColorHint="@color/green"
+                        android:ems="10"
+                        android:id="@+id/text_SOS2"
+                        android:inputType="number"
+                        android:hint="Recapito SOS2"/>
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_marginTop="@dimen/button_margin_top"
+                    android:layout_marginBottom="@dimen/button_margin_bottom"
+                    android:paddingLeft="@dimen/button_padding_left"
+                    android:paddingRight="@dimen/button_padding_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_red"
+                    android:textColor="@color/white"
+                    android:text="Aggiorna"
+                    android:textStyle="normal|bold"
+                    android:id="@+id/button_update"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</FrameLayout>

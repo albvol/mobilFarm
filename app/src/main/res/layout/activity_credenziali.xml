@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_credenziali"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.albertovolpe.mobilfarm.GestoreAccountClient.Credenziali">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_marginTop="30dp"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_gravity="center"
+                android:src="@drawable/logo"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/error_message"
+                android:textColor="@color/red"
+                android:textAlignment="center"
+                android:layout_marginBottom="20dp"/>
+
+            <EditText
+                android:layout_marginTop="@dimen/editText_margin_top"
+                android:layout_marginBottom="@dimen/editText_margin_bottom"
+                android:layout_width="@dimen/editText_width"
+                android:layout_height="@dimen/editText_height"
+                android:paddingLeft="@dimen/editText_padding_left"
+                android:paddingRight="@dimen/editText_padding_right"
+                android:layout_marginLeft="@dimen/editText_margin_left"
+                android:layout_marginRight="@dimen/editText_margin_right"
+                android:textSize="@dimen/font_medium"
+                android:maxLength="50"
+                android:background="@drawable/field_editable"
+                android:textColor="@color/green"
+                android:textColorHint="@color/green"
+                android:ems="10"
+                android:layout_gravity="center"
+                android:id="@+id/credenziali_mail"
+                android:inputType="textEmailAddress"
+                android:hint="inserisci la tua mail" />
+
+            <EditText
+                android:letterSpacing="0"
+                android:layout_marginTop="@dimen/editText_margin_top"
+                android:layout_marginBottom="@dimen/editText_margin_bottom"
+                android:layout_width="@dimen/editText_width"
+                android:layout_height="@dimen/editText_height"
+                android:paddingLeft="@dimen/editText_padding_left"
+                android:paddingRight="@dimen/editText_padding_right"
+                android:textSize="@dimen/font_medium"
+                android:maxLength="15"
+                android:layout_marginLeft="@dimen/editText_margin_left"
+                android:layout_marginRight="@dimen/editText_margin_right"
+                android:background="@drawable/field_editable"
+                android:textColor="@color/green"
+                android:textColorHint="@color/green"
+                android:ems="10"
+                android:layout_gravity="center"
+                android:id="@+id/credenziali_password"
+                android:inputType="text"
+                android:hint="inserisci una password" />
+
+            <EditText
+                android:letterSpacing="0"
+                android:layout_marginTop="@dimen/editText_margin_top"
+                android:layout_marginBottom="@dimen/editText_margin_bottom"
+                android:layout_width="@dimen/editText_width"
+                android:layout_height="@dimen/editText_height"
+                android:paddingLeft="@dimen/editText_padding_left"
+                android:textSize="@dimen/font_medium"
+                android:maxLength="15"
+                android:paddingRight="@dimen/editText_padding_right"
+                android:layout_marginLeft="@dimen/editText_margin_left"
+                android:layout_marginRight="@dimen/editText_margin_right"
+                android:background="@drawable/field_editable"
+                android:textColor="@color/green"
+                android:textColorHint="@color/green"
+                android:ems="10"
+                android:layout_gravity="center"
+                android:id="@+id/credenziali_password_repeat"
+                android:inputType="text"
+                android:hint="reinserisci la password" />
+
+            <Spinner
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/editText_margin_top"
+                android:layout_width="@dimen/editText_width"
+                android:layout_height="@dimen/editText_height"
+                android:paddingLeft="@dimen/editText_padding_left"
+                android:paddingRight="@dimen/editText_padding_right"
+                android:layout_marginLeft="@dimen/editText_margin_left"
+                android:layout_marginRight="@dimen/editText_margin_right"
+                android:textColor="@color/green"
+                android:textColorHint="@color/green"
+                android:background="@drawable/field_editable"
+                android:id="@+id/account_type"/>
+
+
+            <Button
+                android:layout_marginTop="@dimen/button_margin_top"
+                android:layout_marginBottom="@dimen/button_margin_bottom"
+                android:paddingLeft="@dimen/button_padding_left"
+                android:paddingRight="@dimen/button_padding_right"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_height"
+                android:layout_gravity="center"
+                android:background="@drawable/button_green"
+                android:textColor="@color/white"
+                android:text="Procedi"
+                android:id="@+id/login_button"
+                android:onClick="registratiStepTwo"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/green"
+        android:textColor="@color/white"
+        android:text="ANNULLA"
+        android:id="@+id/button_element"
+        android:textSize="@dimen/font_small"
+        android:onClick="openLoginHome"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

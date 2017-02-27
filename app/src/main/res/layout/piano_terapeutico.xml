@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="@dimen/personalized_content_margin_left"
+        android:layout_marginRight="@dimen/personalized_content_margin_right"
+        android:background="@drawable/piano_terapeutico">
+
+        <TextView
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nome Dottore"
+            android:id="@+id/text_nome_cognome"
+            android:textColor="@color/green"
+            android:textSize="@dimen/font_small"/>
+
+        <TextView
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nome Piano"
+            android:id="@+id/text_nome_piano"
+            android:textColor="@color/green"
+            android:textSize="@dimen/font_medium"/>
+
+        <TextView
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="da GG/MM/YY a data GG/MM/YY"
+            android:id="@+id/periodo"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/font_small"/>
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/open"
+            android:src="@drawable/arrow"/>
+    </RelativeLayout>
+</LinearLayout>

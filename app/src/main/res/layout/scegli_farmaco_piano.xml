@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/personalized_content_margin_left"
+        android:layout_marginRight="@dimen/personalized_content_margin_right"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/farmaco_del_piano">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nome Farmaco"
+            android:id="@+id/text_nome_farmaco"
+            android:textColor="@color/green"
+            android:textSize="@dimen/font_medium"/>
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="mg"
+            android:id="@+id/composizione_value"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/font_medium"/>
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,314 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.example.albertovolpe.mobilfarm.GestorePianoClient.FarmacoPianoTerapeutico">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/content_padding_top"
+            android:paddingBottom="@dimen/content_padding_bottom"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Informazioni"
+                android:id="@+id/informazioni_farmaco"
+                android:textAlignment="center"
+                android:textColor="@color/green"
+                android:textSize="@dimen/font_small"/>
+
+            <EditText
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/editText_margin_top"
+                android:layout_marginBottom="@dimen/editText_margin_bottom"
+                android:layout_width="@dimen/editText_width"
+                android:layout_height="@dimen/editText_height"
+                android:paddingLeft="@dimen/editText_padding_left"
+                android:paddingRight="@dimen/editText_padding_right"
+                android:layout_marginLeft="@dimen/editText_margin_left"
+                android:layout_marginRight="@dimen/editText_margin_right"
+                android:background="@drawable/field_editable"
+                android:textColor="@color/green"
+                android:textColorHint="@color/green"
+                android:ems="10"
+                android:id="@+id/text_nome_farmaco"
+                android:inputType="text"
+                android:hint="Nome Farmaco" />
+
+            <TextView
+                android:layout_marginTop="30dp"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Seleziona il Farmaco"
+                android:id="@+id/seleziona_farmaco_textvivew"
+                android:textAlignment="center"
+                android:textColor="@color/green"
+                android:textSize="@dimen/font_small"/>
+
+            <ListView
+                android:layout_marginLeft="@dimen/editText_margin_left"
+                android:layout_marginRight="@dimen/editText_margin_right"
+                android:layout_marginTop="@dimen/editText_margin_top"
+                android:visibility="gone"
+                android:id="@+id/lista_farmaci_trovati"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/second_section">
+
+            <LinearLayout
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/editText_margin_top"
+                android:layout_marginBottom="@dimen/editText_margin_bottom"
+                android:layout_marginLeft="@dimen/editText_margin_left"
+                android:layout_marginRight="@dimen/editText_margin_right"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:paddingTop="15dp"
+                    android:textSize="@dimen/font_medium"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/editText_height"
+                    android:paddingLeft="@dimen/editText_padding_left"
+                    android:paddingRight="@dimen/editText_padding_right"
+                    android:background="@drawable/field_editable"
+                    android:textColor="@color/green"
+                    android:textColorHint="@color/green"
+                    android:ems="10"
+                    android:id="@+id/text_data_inizio"
+                    android:hint="Inizio"/>
+
+                <TextView
+                    android:paddingTop="15dp"
+                    android:textSize="@dimen/font_medium"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/editText_height"
+                    android:paddingLeft="@dimen/editText_padding_left"
+                    android:paddingRight="@dimen/editText_padding_right"
+                    android:background="@drawable/field_editable"
+                    android:textColor="@color/green"
+                    android:textColorHint="@color/green"
+                    android:ems="10"
+                    android:id="@+id/text_data_termine"
+                    android:layout_marginLeft="5dp"
+                    android:hint="Termine"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Posologia"
+                android:id="@+id/posologia_farmaco"
+                android:textAlignment="center"
+                android:textColor="@color/green"
+                android:textSize="@dimen/font_small"/>
+
+
+            <TextView
+                android:layout_gravity="center"
+                android:paddingTop="15dp"
+                android:textSize="@dimen/font_medium"
+                android:layout_marginTop="@dimen/editText_margin_top"
+                android:layout_marginBottom="@dimen/editText_margin_bottom"
+                android:layout_width="@dimen/editText_width"
+                android:layout_height="@dimen/editText_height"
+                android:paddingLeft="@dimen/editText_padding_left"
+                android:paddingRight="@dimen/editText_padding_right"
+                android:layout_marginLeft="@dimen/editText_margin_left"
+                android:layout_marginRight="@dimen/editText_margin_right"
+                android:background="@drawable/field_editable"
+                android:textColor="@color/green"
+                android:textColorHint="@color/green"
+                android:ems="10"
+                android:id="@+id/orario_inizio_farmaco"
+                android:onClick="showDatePickerDialog"
+                android:hint="Ora Inizio"/>
+
+            <Spinner
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/editText_margin_top"
+                android:layout_marginBottom="@dimen/editText_margin_bottom"
+                android:layout_width="@dimen/editText_width"
+                android:layout_height="@dimen/editText_height"
+                android:paddingLeft="@dimen/editText_padding_left"
+                android:paddingRight="@dimen/editText_padding_right"
+                android:layout_marginLeft="@dimen/editText_margin_left"
+                android:layout_marginRight="@dimen/editText_margin_right"
+                android:textColor="@color/green"
+                android:textColorHint="@color/green"
+                android:background="@drawable/field_editable"
+                android:id="@+id/intervallo_farmaco"
+                android:entries="@array/intervallo"/>
+
+            <Spinner
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/editText_margin_top"
+                android:layout_marginBottom="@dimen/editText_margin_bottom"
+                android:layout_width="@dimen/editText_width"
+                android:layout_height="@dimen/editText_height"
+                android:paddingLeft="@dimen/editText_padding_left"
+                android:paddingRight="@dimen/editText_padding_right"
+                android:layout_marginLeft="@dimen/editText_margin_left"
+                android:layout_marginRight="@dimen/editText_margin_right"
+                android:textColor="@color/green"
+                android:textColorHint="@color/green"
+                android:background="@drawable/field_editable"
+                android:id="@+id/dosaggio_farmaco"
+                android:entries="@array/dosaggio"/>
+
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Giorni"
+                android:id="@+id/giorni_farmaco"
+                android:textAlignment="center"
+                android:textColor="@color/green"
+                android:textSize="@dimen/font_small"/>
+
+            <GridLayout
+                android:layout_marginLeft="-5dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="2">
+
+                <CheckBox
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_row="0"
+                    android:textColor="@color/green"
+                    android:button="@drawable/checkbox_selector"
+                    android:id="@+id/lunedi"
+                    android:textSize="@dimen/font_medium"
+                    android:text="  Lunedi'"/>
+
+                <CheckBox
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:textSize="@dimen/font_medium"
+                    android:layout_row="0"
+                    android:textColor="@color/green"
+                    android:button="@drawable/checkbox_selector"
+                    android:id="@+id/martedi"
+                    android:text="  Martedi'"/>
+
+                <CheckBox
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_row="1"
+                    android:textSize="@dimen/font_medium"
+                    android:textColor="@color/green"
+                    android:id="@+id/mercoledi"
+                    android:button="@drawable/checkbox_selector"
+                    android:text="  Mercoledi'"/>
+
+                <CheckBox
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_row="1"
+                    android:textSize="@dimen/font_medium"
+                    android:textColor="@color/green"
+                    android:id="@+id/giovedi"
+                    android:button="@drawable/checkbox_selector"
+                    android:text="  Giovedi'"/>
+
+                <CheckBox
+                    android:layout_marginTop="10dp"
+                    android:textSize="@dimen/font_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_row="2"
+                    android:textColor="@color/green"
+                    android:id="@+id/venerdi"
+                    android:button="@drawable/checkbox_selector"
+                    android:text="  Venerdi'"/>
+
+                <CheckBox
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:textSize="@dimen/font_medium"
+                    android:layout_row="2"
+                    android:textColor="@color/green"
+                    android:id="@+id/sabato"
+                    android:button="@drawable/checkbox_selector"
+                    android:text="  Sabato"/>
+
+                <CheckBox
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_row="3"
+                    android:textSize="@dimen/font_medium"
+                    android:textColor="@color/green"
+                    android:id="@+id/domenica"
+                    android:button="@drawable/checkbox_selector"
+                    android:text="  Domenica"/>
+
+            </GridLayout>
+
+
+            <Button
+                android:layout_marginTop="@dimen/button_margin_bottom"
+                android:layout_marginBottom="@dimen/button_margin_bottom"
+                android:paddingLeft="@dimen/button_padding_left"
+                android:paddingRight="@dimen/button_padding_right"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_height"
+                android:layout_gravity="center"
+                android:background="@drawable/button_green"
+                android:textColor="@color/white"
+                android:text="Salva"
+                android:textStyle="normal"
+                android:id="@+id/button_save"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/feedback_message"
+                android:textColor="@color/green"
+                android:textAlignment="center"/>
+        </LinearLayout>
+
+    </ScrollView>
+</FrameLayout>

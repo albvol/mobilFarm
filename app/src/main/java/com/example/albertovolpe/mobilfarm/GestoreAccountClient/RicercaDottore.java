@@ -83,7 +83,7 @@ public class RicercaDottore extends Fragment {
     private TextWatcher search = new TextWatcher() {
         public void afterTextChanged(Editable s) {
 
-            Pattern letters = Pattern.compile("^[a-z]+$", Pattern.CASE_INSENSITIVE);
+            Pattern letters = Pattern.compile("^[a-z ]+$", Pattern.CASE_INSENSITIVE);
 
             try
             {
